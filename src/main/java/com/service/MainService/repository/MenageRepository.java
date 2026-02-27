@@ -9,6 +9,4 @@ import java.util.UUID;
 
 @Repository
 public interface MenageRepository extends JpaRepository<Menage, UUID> {
-    // Trouve tous les ménages dont le score est inférieur ou égal au seuil du programme
-    List<Menage> findByScoreSocialLessThanEqual(Integer scoreMax);
 }
