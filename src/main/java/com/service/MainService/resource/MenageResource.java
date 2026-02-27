@@ -26,7 +26,7 @@ public class MenageResource {
 
     @PostMapping
     @PreAuthorize("hasRole('AGENT')")
-    @Operation(summary = "Créer un menage", description = "Création de menage")
+    @Operation(summary = "Créer un menage sociale", description = "Création de menage")
     public MenageDTO create(@RequestBody MenageDTO dto) {
         return service.create(dto);
     }
@@ -45,5 +45,21 @@ public class MenageResource {
             = "Récupération d'un menage par son ID")
     public MenageDTO findById(@PathVariable UUID id) {
         return service.findById(id);
+    }
+
+    @PutMapping("/{id}")
+    @PreAuthorize("hasRole('AGENT')")
+    @Operation(summary = "Modifier un menage par son ID", description =
+            "Modification d'un menage par son ID")
+    public MenageDTO update(@PathVariable UUID id, @RequestBody MenageDTO dto) {
+        return service.update(id, dto);
+    }
+
+    @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('AGENT')")
+    @Operation(summary = "Supprimer un menage par son ID", description =
+            "Suppression d'un menage par son ID")
+    public void delete(@PathVariable UUID id) {
+        service.delete(id);
     }
 }
