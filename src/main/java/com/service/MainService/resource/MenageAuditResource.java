@@ -1,4 +1,4 @@
-package com.service.MainService.ressource;
+package com.service.MainService.resource;
 
 import com.service.MainService.dto.AuditHistoryDTO;
 import com.service.MainService.entity.Menage;
@@ -11,11 +11,11 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/admin/menages")
-public class MenageAuditController {
+public class MenageAuditResource {
 
     private final AuditService auditService;
 
-    public MenageAuditController(AuditService auditService) {
+    public MenageAuditResource(AuditService auditService) {
         this.auditService = auditService;
     }
 

@@ -1,4 +1,4 @@
-package com.service.MainService.ressource;
+package com.service.MainService.resource;
 
 import com.service.MainService.dto.MenageDTO;
 import com.service.MainService.service.MenageService;
@@ -10,11 +10,11 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/menages")
-public class MenageController {
+public class MenageResource {
 
     private final MenageService service;
 
-    public MenageController(MenageService service) {
+    public MenageResource(MenageService service) {
         this.service = service;
     }
 

@@ -1,4 +1,4 @@
-package com.service.MainService.ressource;
+package com.service.MainService.resource;
 
 import com.service.MainService.dto.ResidentDTO;
 import com.service.MainService.service.ResidentService;
